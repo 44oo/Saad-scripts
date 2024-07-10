@@ -1,0 +1,9 @@
+getgenv().Antilock = true 
+game:GetService("RunService").heartbeat:Connect(function()
+    if getgenv().Antilock == true then 
+local abc = game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = Vector3.new(0,0,0) * (2^10)
+    game:GetService("RunService").RenderStepped:Wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = abc
+    end 
+end)

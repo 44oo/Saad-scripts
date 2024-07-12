@@ -2,14 +2,14 @@ if not game:IsLoaded() then
 	game.Loaded:Wait()
 end
 
-local Swagmode = Instance.new("ScreenGui")
-local SwagmodeFrame = Instance.new("Frame")
+local SAAD = Instance.new("ScreenGui")
+local SAADFrame = Instance.new("Frame")
 local MenuFrame = Instance.new("Frame")
 local TogglesButton = Instance.new("TextButton")
 local QuickTpButton = Instance.new("TextButton")
 local SideButton = Instance.new("TextButton")
 local imiecredits = Instance.new("TextLabel")
-local Swagmode_2 = Instance.new("TextLabel")
+local SAAD_2 = Instance.new("TextLabel")
 local UIGradient = Instance.new("UIGradient")
 local Frame = Instance.new("Frame")
 local MainButton = Instance.new("TextButton")
@@ -69,6 +69,7 @@ local Esp = Instance.new("TextButton")
 local LastingBullets = Instance.new("TextButton")
 local GrenadeLock = Instance.new("TextButton")
 local Spin = Instance.new("TextButton")
+local Rip-half = Instance.new("TextButton")
 local Unban = Instance.new("TextButton")
 local TaserLock = Instance.new("TextButton")
 local RpgLock = Instance.new("TextButton")
@@ -116,19 +117,19 @@ local Frame_2 = Instance.new("Frame")
 local CrashServerButton = Instance.new("TextButton")
 
 --Properties:
-Swagmode.Name = "Swagmode"
-Swagmode.Parent = game.CoreGui
-Swagmode.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+SAAD.Name = "SAAD"
+SAAD.Parent = game.CoreGui
+SAAD.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-SwagmodeFrame.Name = "SwagmodeFrame"
-SwagmodeFrame.Parent = Swagmode
-SwagmodeFrame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
-SwagmodeFrame.BorderSizePixel = 0
-SwagmodeFrame.Position = UDim2.new(0.212884605, 0, 0.190036908, 0)
-SwagmodeFrame.Size = UDim2.new(0, 605, 0, 336)
+SAAD.Name = "SAADFrame"
+SAADFrame.Parent = Swagmode
+SAADFrame.BackgroundColor3 = Color3.fromRGB(60, 60, 60)
+SAADFrame.BorderSizePixel = 0
+SAADFrame.Position = UDim2.new(0.212884605, 0, 0.190036908, 0)
+SAADFrame.Size = UDim2.new(0, 605, 0, 336)
 
 MenuFrame.Name = "MenuFrame"
-MenuFrame.Parent = SwagmodeFrame
+MenuFrame.Parent = SAADFrame
 MenuFrame.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 MenuFrame.BorderSizePixel = 0
 MenuFrame.Size = UDim2.new(0, 155, 0, 336)
@@ -183,16 +184,16 @@ imiecredits.TextSize = 14.000
 imiecredits.TextXAlignment = Enum.TextXAlignment.Left
 imiecredits.TextYAlignment = Enum.TextYAlignment.Top
 
-Swagmode_2.Name = "Swagmode"
-Swagmode_2.Parent = MenuFrame
-Swagmode_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-Swagmode_2.BackgroundTransparency = 1.000
-Swagmode_2.Position = UDim2.new(0.045161292, 0, 0, 0)
-Swagmode_2.Size = UDim2.new(0, 115, 0, 34)
-Swagmode_2.Font = Enum.Font.GothamBlack
-Swagmode_2.Text = "SWAGMODE"
-Swagmode_2.TextColor3 = Color3.fromRGB(255, 255, 255)
-Swagmode_2.TextSize = 20.000
+SAAD_2.Name = "SAAD"
+SAAD_2.Parent = MenuFrame
+SAAD_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+SAAD_2.BackgroundTransparency = 1.000
+SAAD_2.Position = UDim2.new(0.045161292, 0, 0, 0)
+SAAD_2.Size = UDim2.new(0, 115, 0, 34)
+SAAD_2.Font = Enum.Font.GothamBlack
+SAAD_2.Text = "SWAGMODE"
+SAAD_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+SAAD_2.TextSize = 20.000
 
 UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(49, 48, 70)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 255, 255))}
 UIGradient.Offset = Vector2.new(0.100000001, 0)
@@ -257,7 +258,7 @@ TopLine.Position = UDim2.new(0.256198347, 0, 0, 0)
 TopLine.Size = UDim2.new(0, 450, 0, 7)
 
 SideInfo.Name = "SideInfo"
-SideInfo.Parent = SwagmodeFrame
+SideInfo.Parent = SAADFrame
 SideInfo.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
 SideInfo.BorderSizePixel = 0
 SideInfo.Position = UDim2.new(0.778512418, 0, 0.020833334, 0)
@@ -1147,6 +1148,125 @@ AntiBag.Font = Enum.Font.GothamBlack
 AntiBag.Text = "Anti-Bag"
 AntiBag.TextColor3 = Color3.fromRGB(255, 255, 255)
 AntiBag.TextSize = 14.000
+
+Rip-half.Name = "Rip-half"
+         game.StarterGui:SetCore("SendNotification",{
+            Title = "SAAD RIP IN HALF ACTIVED",
+            Text = "MADE BY SAAD",
+            Duration = 2
+        })
+
+  
+    local LocalPlayer = game.Players.LocalPlayer
+    local Character = LocalPlayer.Character
+    
+    local IM = game:GetService("ReplicatedStorage").IM.ANIM
+    
+    local PlayersChar = workspace.Players
+    
+    if _G.JOINTWATCHER then
+        _G.JOINTWATCHER:Disconnect()
+    end
+    
+    local function Align(P0, P1, P, R)
+        local A0, A1 = Instance.new("Attachment", P0), Instance.new("Attachment", P1)
+        
+        local AP, AO = Instance.new("AlignPosition", P0), Instance.new("AlignOrientation", P0)
+        
+        A1.Position = P
+        A0.Rotation = R
+        
+        AP.RigidityEnabled = true
+        AP.Responsiveness = 500
+        AP.Attachment0 = A0
+        AP.Attachment1 = A1
+        
+        AO.MaxTorque = 9e9
+        AO.Responsiveness = 500
+        AO.RigidityEnabled = true
+        AO.Attachment0 = A0
+        AO.Attachment1 = A1
+        
+        return A0, A1, AP, A0
+    end
+    
+    _G.JOINTWATCHER = PlayersChar.DescendantAdded:Connect(function(Ins)
+        if Ins:IsA("Weld") and Ins.Name == "GRABBING_CONSTRAINT" then
+            repeat task.wait() until Ins.Part0 ~= nil
+            repeat task.wait() until Ins:FindFirstChildOfClass("RopeConstraint")
+            
+            local AT0, AT1, AP, A0
+            
+            if Ins.Part0:IsDescendantOf(LocalPlayer.Character) then
+                Ins:FindFirstChildOfClass("RopeConstraint").Length = 9e9
+                
+                
+                Character.Humanoid:LoadAnimation(IM.RightAim):Play()
+                
+                AT0, AT1, AP, A0 = Align(Ins.Parent.UpperTorso, LocalPlayer.Character.RightHand, Vector3.new(0, 0, 0), Vector3.new(90, 0, 0))
+            end
+            
+            repeat task.wait() until Ins.Parent == nil
+            
+        for i,v in pairs(game.Players.LocalPlayer.Character:WaitForChild("Humanoid"):GetPlayingAnimationTracks()) do
+        if (v.Animation.AnimationId:match("rbxassetid://13850675130")) then
+        v:Stop()
+        end
+        end
+
+        AT0:Destroy()
+        AT1:Destroy()
+        AP:Destroy()
+        A0:Destroy()
+    end
+end)
+
+local PLR = game:GetService("Players").LocalPlayer
+local CHAR = game:GetService("Players").LocalPlayer.Character
+local RIP_CD = false
+
+    local RIPINHALF = Instance.new("Tool", PLR.Backpack)
+    RIPINHALF.Name = "SAAD RIP IN HALF"
+    RIPINHALF.CanBeDropped = false
+    RIPINHALF.RequiresHandle = false
+    RIPINHALF.Activated:connect(function()
+        local GrabbedPLR = CHAR.BodyEffects:FindFirstChild("Grabbed")
+        if GrabbedPLR.Value ~= nil then
+            if RIP_CD == true then return end
+            RIP_CD = true
+            local GrabbedCHAR = GrabbedPLR.Value
+
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("YOU GOT RIP HALF BY SAAD..", "All")   
+            GrabbedCHAR.RightUpperArm.Position = Vector3.new(0,-1500,0)
+            GrabbedCHAR.LeftUpperArm.Position = Vector3.new(0,-1500,0)
+            GrabbedCHAR.RightUpperLeg.Position = Vector3.new(0,-1500,0)
+            GrabbedCHAR.LeftUpperLeg.Position = Vector3.new(0,-1500,0)
+            task.wait(.1)
+            game:GetService("ReplicatedStorage"):WaitForChild("MainEvent"):FireServer("Grabbing", false)
+            RIP_CD = false
+        end
+end)
+
+    local RIPINHALF = Instance.new("Tool", PLR.Backpack)
+    RIPINHALF.Name = "SAAD RIP IN HALF [FULLY GLITCHED]"
+    RIPINHALF.CanBeDropped = false
+    RIPINHALF.RequiresHandle = false
+    RIPINHALF.Activated:connect(function()
+        local GrabbedPLR = CHAR.BodyEffects:FindFirstChild("Grabbed")
+        if GrabbedPLR.Value ~= nil then
+            if RIP_CD == true then return end
+            RIP_CD = true
+            local GrabbedCHAR = GrabbedPLR.Value
+
+            game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("YOU GOT RIP HALF BY SAAD....", "All")   
+            GrabbedCHAR.RightUpperArm.Position = Vector3.new(0,-1500,0)
+            GrabbedCHAR.LeftUpperArm.Position = Vector3.new(0,-1500,0)
+            GrabbedCHAR.LowerTorso.Position = Vector3.new(0,-1500,0)
+            task.wait(.1)
+            game:GetService("ReplicatedStorage"):WaitForChild("MainEvent"):FireServer("Grabbing", false)
+            RIP_CD = false
+        end
+end)
 
 AntiBagColor.Name = "AntiBagColor"
 AntiBagColor.Parent = AntiBag

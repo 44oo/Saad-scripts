@@ -1,4 +1,4 @@
-getgenv().LettuceFarm - true
+getgenv().LettuceFarm = true
 game:GetService("RunService").Heartbeat:Connect(function()
 		if getgenv().LettuceFarm == true then
 			wait()

@@ -1,9 +1,3 @@
-game.StarterGui:SetCore("SendNotification",{
-            Title = "VOID AIMLOCK ACTIVED",
-            Text = "MADE BY VOID",
-            Duration = 2
-        })
-
 getgenv().keytoclick = "V"
 tool = Instance.new("Tool")
 tool.RequiresHandle = false

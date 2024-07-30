@@ -4,8 +4,6 @@ game.StarterGui:SetCore("SendNotification",{
             Duration = 2
         })
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/44oo/Saad-scripts/main/whitelist1"))()
-
 getgenv().keytoclick = "V"
 tool = Instance.new("Tool")
 tool.RequiresHandle = false

